@@ -1,5 +1,5 @@
-#Projet Python L3 EIF : Sujet B, 3 personnes, Option A
---
+# Projet Python L3 EIF : Sujet B, 3 personnes, Option A
+SAN Pauline, SUAU Sarah, XIANG Séverine
 # Introduction 
 
 Remonter le temps pour mettre à l’épreuve une stratégie d’investissement : telle est l’essence du backtesting.
