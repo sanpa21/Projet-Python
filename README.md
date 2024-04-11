@@ -1,6 +1,6 @@
 # Projet Python L3 EIF : Sujet B, 3 personnes, Option A
 SAN Pauline, SUAU Sarah, XIANG Séverine
-# Introduction 
+## Introduction 
 
 Remonter le temps pour mettre à l’épreuve une stratégie d’investissement : telle est l’essence du backtesting.
 <p align="justify">
@@ -18,3 +18,31 @@ Malgré ces limites, le backtesting demeure une pratique courante dans le domain
 <p align="justify">
 Ainsi, dans le cadre de ce projet, nous allons développer un backtesteur, sur Jupyter, qui accepte une fonction de stratégie applicable à plusieurs actifs.
 </p>
+
+## I. Initialisation de la classe et importation des bibliothèques utilisées
+
+
+
+
+  
+## II. Récupération et stockage local des données : méthode **Compute**
+
+
+<p align="justify">
+La méthode <strong>Compute</strong> est conçue pour récupérer les données financières des marchés et des symboles financiers, spécifiés par l'utilisateur, sur une période donnée. Initialement, cette méthode lit les données à partir de fichiers CSV, s'ils existent, grâce à la fonction <strong>pd.read_csv()</strong>. Si ces fichiers CSV ne sont pas présents localement, la méthode utilise l'API de Yahoo Finance pour récupérer les données. Pour cela, on utilise la fonction <strong>yf.download()</strong>. Ces données sont ensuite stockées locelemnt dans des fichiers CSV. </p>
+
+<p align="justify">
+Les fichiers CSV sont nommés de manière à inclure le symbole ou le marché concerné, ainsi que les dates de début et de fin de la période.
+Une fois les données récupérées et stockées localement, elles sont converties en Dataframe pour un traitement plus facile dans <strong>self.df_market</strong>, pour chaque marché, et dans <strong>self.df</strong>, pour chaque symbol lesquels sont stockés dans un dictionnaire <strong>self.symbols</strong>. </p>
+
+<p align="justify">
+Pour chaque marché dans <strong>self.df_market</strong>, deux colonnes supplémentaires sont ajoutées : une pour les rendements négatifs et une autre pour les rendements positifs, les deux ayant été obtenues en calculant les variations des prix de clôture par rapport au jour précédent puis les données positives et négatives sont récupérées grâce à la fonction <strong>np.where</strong>. </p>
+
+<p align="justify">
+Enfin, pour chaque symbole financier, une colonne supplémentaire est ajoutée, dans <strong>self.df</strong>, pour stocker les positions, après avoir appliqué la stratégie sur les données obtenues précédemment. </p>
+
+## III. Mesurer la performance de la stratégie : méthode **Summary**
+
+## IV. Visualiser les résultats de la stratégie : méthode **Plot**
+
+
