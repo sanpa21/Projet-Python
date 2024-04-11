@@ -46,3 +46,9 @@ Enfin, pour chaque symbole financier, une colonne supplémentaire est ajoutée, 
 ## IV. Visualiser les résultats de la stratégie : méthode **Plot**
 
 
+## V. Tester le backtest 
+
+<p align="justify">
+Prenons un exemple simple de stratégie. Nous calculons la moyenne mobile sur 50 jours pour un actif et également la moyenne mobile sur 200 jours. Sachant que la moyenne mobile sert à identifier des tendances sur des périodes plus ou moins longues, nous comparons ces deux moyennes mobiles. Une moyenne mobile sur 50 jours (court terme) supérieure à la moyenne mobile sur 200 jours (long terme) peut indiquer une tendance à la hausse récente des prix. La stratégie consistera alors à acheter à ce moment et attendre que les prix continuent à monter sur le court terme (position = 1). L’actif sera revendu lorsque la moyenne mobile sur 200 jours sera supérieure à celle sur 50 jours car cela indique une tendance à la baisse à court terme, soit un risque de baisse de la valeur de l’actif dans les jours qui suivent (position = -1). </p>
+
+
