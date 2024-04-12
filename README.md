@@ -20,7 +20,12 @@ Ainsi, dans le cadre de ce projet, nous allons développer un backtesteur, sur J
 </p>
 
 ## I. Initialisation de la classe et importation des bibliothèques utilisées
-
+<p align="justify">
+Afin d'accéder aux données du marché, nous avons fait usage de la bibliothèque yfinance qui récupère les données de Yahoo Finance. La bibliothèque permet d'accéder aux prix des actions, à des données historiques, et à des informations financières et statistiques. </p>
+Nous avons également utilisé le module matplotlib.pyplot de la bibliothèque matplotlib qui est souvent utilisée pour créer des visualisations et des graphiques de données. Ce module permet notamment de créer des graphiques simples, personnaliser des graphiques ou encore les exporter. Aussi liée à la bibliothèque matplotlib, la bibliothèque mplfinance simplifie la création de graphiques financiers interactifs et personnalisables, en particulier des graphiques en chandeliers japonais, des graphiques en barres, des graphiques en lignes, etc...  </p>
+Une autre bibliothèque très connue que nous utilisons est la bibliothèque pandas pour la manipulation et l'analyse de données. Elle offre des structures de données flexibles et performantes, ainsi que des outils pour lire, écrire, filtrer, regrouper, joindre et analyser des données tabulaires et de séries temporelles. </p>
+NumPy (ou Numeric Python) est une bibliothèque également très connue, fondamentale pour le calcul numérique. Elle fournit des structures de données et des fonctions pour travailler efficacement avec des tableaux multidimensionnels ainsi que des outils pour effectuer des opérations mathématiques et statistiques sur ces tableaux. </p>
+Enfin, la dernière bibliothèque que nous importons est os qui fournit des fonctionnalités pour interagir avec le système d'exploitation, telles que la navigation dans le système de fichiers, la manipulation des chemins de fichiers, la création et la suppression de répertoires. Cette bibliothèque offre une interface pour accéder aux fonctionnalités du système d'exploitation.</p>
 
 
 
