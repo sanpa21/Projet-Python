@@ -64,7 +64,7 @@ Enfin, pour chaque symbole financier, une colonne supplémentaire est ajoutée, 
 
 #### 2. Volatilité 
 
-#### # i. Volatilité quoditienne
+##### i. Volatilité quoditienne
 
 ##### ii. Volatilité annuelle
 
