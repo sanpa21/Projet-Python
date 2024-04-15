@@ -76,11 +76,11 @@ Enfin, pour chaque symbole financier, une colonne supplémentaire est ajoutée, 
 
 #### 2. Bêta baissier
 
-### 3. Drawdown Maximal
+#### 3. Drawdown Maximal
 
-### 4. Kurtosis
+#### 4. Kurtosis
 
-### 5. Skewness
+#### 5. Skewness
 
 ## IV. Visualiser les résultats de la stratégie : méthode **Plot**
 
