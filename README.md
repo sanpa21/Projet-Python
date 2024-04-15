@@ -21,15 +21,15 @@ Ainsi, dans le cadre de ce projet, nous allons développer un backtesteur, sur J
 
 ## I. Initialisation de la classe et importation des bibliothèques utilisées
 <p align="justify">
-Afin d'accéder aux données du marché, nous avons fait usage de la bibliothèque yfinance qui récupère les données de Yahoo Finance. La bibliothèque permet d'accéder aux prix des actions, à des données historiques, et à des informations financières et statistiques. </p>
+Afin d'accéder aux données du marché, nous avons fait usage de la bibliothèque <strong>yfinance</strong> qui récupère les données de Yahoo Finance. La bibliothèque permet d'accéder aux prix des actions, à des données historiques, et à des informations financières et statistiques. </p>
 <p align="justify">
-Nous avons également utilisé le module matplotlib.pyplot de la bibliothèque matplotlib qui est souvent utilisée pour créer des visualisations et des graphiques de données. Ce module permet notamment de créer des graphiques simples, personnaliser des graphiques ou encore de les exporter. Aussi liée à la bibliothèque matplotlib, la bibliothèque mplfinance simplifie la création de graphiques financiers interactifs et personnalisables, en particulier des graphiques en chandeliers japonais, des graphiques en barres, des graphiques en lignes, etc...  </p>
+Nous avons également utilisé le module matplotlib.pyplot de la bibliothèque <strong>matplotlib</strong> qui est souvent utilisée pour créer des visualisations et des graphiques de données. Ce module permet notamment de créer des graphiques simples, personnaliser des graphiques ou encore de les exporter. Aussi liée à la bibliothèque matplotlib, la bibliothèque <strong>mplfinance</strong> simplifie la création de graphiques financiers interactifs et personnalisables, en particulier des graphiques en chandeliers japonais, des graphiques en barres, des graphiques en lignes, etc...  </p>
 <p align="justify">
-Une autre bibliothèque très connue que nous utilisons, est la bibliothèque pandas pour la manipulation et l'analyse de données. Elle offre des structures de données flexibles et performantes, ainsi que des outils pour lire, écrire, filtrer, regrouper, joindre et analyser des données tabulaires et de séries temporelles. </p>
+Une autre bibliothèque très connue que nous utilisons, est la bibliothèque <strong>pandas</strong> pour la manipulation et l'analyse de données. Elle offre des structures de données flexibles et performantes, ainsi que des outils pour lire, écrire, filtrer, regrouper, joindre et analyser des données tabulaires et de séries temporelles. </p>
 <p align="justify">
-NumPy (ou Numeric Python) est une bibliothèque également très connue, fondamentale pour le calcul numérique. Elle fournit des structures de données et des fonctions pour travailler efficacement avec des tableaux multidimensionnels, ainsi que des outils pour effectuer des opérations mathématiques et statistiques sur ces tableaux. </p>
+<strong>NumPy</strong> (ou Numeric Python) est une bibliothèque également très connue, fondamentale pour le calcul numérique. Elle fournit des structures de données et des fonctions pour travailler efficacement avec des tableaux multidimensionnels, ainsi que des outils pour effectuer des opérations mathématiques et statistiques sur ces tableaux. </p>
 <p align="justify">
-Enfin, la dernière bibliothèque que nous importons est os qui fournit des fonctionnalités pour interagir avec le système d'exploitation, telles que la navigation dans le système de fichiers, la manipulation des chemins de fichiers, la création et la suppression de répertoires. Cette bibliothèque offre une interface pour accéder aux fonctionnalités du système d'exploitation.</p>
+Enfin, la dernière bibliothèque que nous importons est <strong>os</strong> qui fournit des fonctionnalités pour interagir avec le système d'exploitation, telles que la navigation dans le système de fichiers, la manipulation des chemins de fichiers, la création et la suppression de répertoires. Cette bibliothèque offre une interface pour accéder aux fonctionnalités du système d'exploitation.</p>
 
 
 
@@ -38,14 +38,14 @@ Enfin, la dernière bibliothèque que nous importons est os qui fournit des fonc
 
 
 <p align="justify">
-La méthode <strong>Compute</strong> est conçue pour récupérer les données financières des marchés et des symboles financiers, spécifiés par l'utilisateur, sur une période donnée. Initialement, cette méthode lit les données à partir de fichiers CSV, s'ils existent, grâce à la fonction <strong>pd.read_csv()</strong>. Si ces fichiers CSV ne sont pas présents localement, la méthode utilise l'API de Yahoo Finance pour récupérer les données. Pour cela, on utilise la fonction <strong>yf.download()</strong>. Ces données sont ensuite stockées locelemnt dans des fichiers CSV. </p>
+La méthode <strong>Compute</strong> est conçue pour récupérer les données financières des marchés et des symboles financiers, spécifiés par l'utilisateur, sur une période donnée. Initialement, cette méthode lit les données à partir de fichiers CSV, s'ils existent, grâce à la fonction <strong>pd.read_csv()</strong>. Si ces fichiers CSV ne sont pas présents localement, la méthode utilise l'API de Yahoo Finance pour récupérer les données. Pour cela, on utilise la fonction <strong>yf.download()</strong>. Ces données sont ensuite stockées localement dans des fichiers CSV. </p>
 
 <p align="justify">
 Les fichiers CSV sont nommés de manière à inclure le symbole ou le marché concerné, ainsi que les dates de début et de fin de la période.
-Une fois les données récupérées et stockées localement, elles sont converties en Dataframe pour un traitement plus facile dans <strong>self.df_market</strong>, pour chaque marché, et dans <strong>self.df</strong>, pour chaque symbol lesquels sont stockés dans un dictionnaire <strong>self.symbols</strong>. </p>
+Une fois les données récupérées et stockées localement, elles sont converties en Dataframe pour un traitement plus facile dans <strong>self.df_market</strong>, pour chaque marché, et dans <strong>self.df</strong>, pour chaque symbole stocké dans un dictionnaire <strong>self.symbols</strong>. </p>
 
 <p align="justify">
-Pour chaque marché dans <strong>self.df_market</strong>, deux colonnes supplémentaires sont ajoutées : une pour les rendements négatifs et une autre pour les rendements positifs, les deux ayant été obtenues en calculant les variations des prix de clôture par rapport au jour précédent puis les données positives et négatives sont récupérées grâce à la fonction <strong>np.where</strong>. </p>
+Pour chaque marché dans <strong>self.df_market</strong>, deux colonnes supplémentaires sont ajoutées : une pour les rendements négatifs et une autre pour les rendements positifs, les deux ayant été obtenues en calculant les variations des prix de clôture par rapport au jour précédent, puis les données positives et négatives sont récupérées grâce à la fonction <strong>np.where</strong>. </p>
 
 <p align="justify">
 Enfin, pour chaque symbole financier, une colonne supplémentaire est ajoutée, dans <strong>self.df</strong>, pour stocker les positions, après avoir appliqué la stratégie sur les données obtenues précédemment. </p>
