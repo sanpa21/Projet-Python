@@ -52,6 +52,36 @@ Enfin, pour chaque symbole financier, une colonne supplémentaire est ajoutée, 
 
 ## III. Mesurer la performance de la stratégie : méthode **Summary**
 
+### A. Les indicateurs de performance classique
+
+#### 1. Rendements
+
+##### i. Rendements de la stratégie
+
+##### ii. Rendements cumulatifs
+
+##### iii. Rendement moyen annuel
+
+#### 2. Volatilité 
+
+#### # i. Volatilité quoditienne
+
+##### ii. Volatilité annuelle
+
+#### 3. Bêta
+
+### B. Les indicateurs de performance "moins" classiques
+
+#### 1. Bêta haussier
+
+#### 2. Bêta baissier
+
+### 3. Drawdown Maximal
+
+### 4. Kurtosis
+
+### 5. Skewness
+
 ## IV. Visualiser les résultats de la stratégie : méthode **Plot**
 
 
