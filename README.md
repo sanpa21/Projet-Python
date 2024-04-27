@@ -153,10 +153,10 @@ A l'aide de la fonction plt.plot() de matplotlib, nous traçons le graphique d'�
 
 ## V. Tester le backtest 
 <p align="justify">
-Nous testons le code avec un exemple. La fonction mastrategie(data) implémente un exemple de stratégie de trading qui prend des positions basées sur la variation de prix entre les deux derniers jours. Tout d'abord, la liste positions est initialisée avec une seule valeur (0) pour la première journée, car il n'y a pas de position prise à ce moment-là. La boucle for itère sur les données à partir du deuxième jour jusqu'au dernier jour. Pour chaque jour, la variation de prix entre le jour actuel et le jour précédent est calculée à l'aide de la formule : (prix_jour_actuel - prix_jour_précédent) / prix_jour_précédent. En fonction de la variation de prix calculée, une position est prise : </n>
-- Si la variation de prix est supérieure à 2%, une position d'achat partielle est prise (représentée par 1). </n>
-- Si la variation de prix est inférieure à -2%, une position de vente partielle est prise (représentée par -1). </n>
-- Sinon, aucune position n'est prise (représentée par 0). </n>
+Nous testons le code avec un exemple. La fonction mastrategie(data) implémente un exemple de stratégie de trading qui prend des positions basées sur la variation de prix entre les deux derniers jours. Tout d'abord, la liste positions est initialisée avec une seule valeur (0) pour la première journée, car il n'y a pas de position prise à ce moment-là. La boucle for itère sur les données à partir du deuxième jour jusqu'au dernier jour. Pour chaque jour, la variation de prix entre le jour actuel et le jour précédent est calculée à l'aide de la formule : (prix_jour_actuel - prix_jour_précédent) / prix_jour_précédent. En fonction de la variation de prix calculée, une position est prise :   
+- Si la variation de prix est supérieure à 2%, une position d'achat partielle est prise (représentée par 1).  
+- Si la variation de prix est inférieure à -2%, une position de vente partielle est prise (représentée par -1).  
+- Sinon, aucune position n'est prise (représentée par 0).  
 La fonction renvoie uniquement la colonne "Position" du dataframe data dans laquelle on a stocké la liste des positions.  </p>
 
 
