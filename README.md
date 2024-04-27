@@ -138,13 +138,30 @@ Pour rendre le calcul plus simple, nous ne prenons pas en compte de taux sans ri
 ## IV. Visualiser les résultats de la stratégie : méthode **Plot**
 
 <p align="justify">
+Pour chaque symbole, nous traçons trois graphiques : un graphique de chandeliers japonais qui suit le cours du titre, un graphique pour visualiser les positions prises pour la stratégie, et un graphique pour l'évolution de la valeur du titre. </p>
+
+<p align="justify">
+Pour dessiner les chandeliers japonais, il nous faut d'abord convertir l'index du dataframe associé à chaque symbole en objet de date et d'heure. La commande mpf.plot() va alors tracer le graphique en prenant en paramètres le type de graphique souhaité, l'affichage du volume, le style du graphique et l'axe sur lequel tracer le graphique. </p>
+
+<p align="justify">
+On crée un deuxième sous-graphique pour tracer les positions prises pour chaque symbole. Les positions sont tracées en fonction de la date (index du dataframe). Les lignes  suivantes permettent de définir un titre, les étiquettes des axes et les emplacements des marques sur l'axe y. </p>
+
+<p align="justify">
 A l'aide de la fonction plt.plot() de matplotlib, nous traçons le graphique d'évolution de la performance pour chaque symbole désigné par la stratégie. Nous calculons la valeur de la stratégie en base 100 en ajoutant 1 au rendement de la stratégie pour chaque période ce qui nous permet de représenter la performance de la stratégie sous forme de valeur relative en partant d'une base de 100. Ensuite, plt.plot() nous permet de traçer l'évolution de la valeur de la stratégie au fil du temps. Pour une meilleure visibilité, nous ajoutons au graphique une légende pour indiquer la série de données représentée, un titre qui contient le symbole et des étiquettes d'axes. Enfin, nous affichons le graphique à l'écran. </p> 
 
 
 
 ## V. Tester le backtest 
+<p align="justify">
+Nous testons le code avec un exemple. La fonction mastrategie(data) implémente un exemple de stratégie de trading qui prend des positions basées sur la variation de prix entre les deux derniers jours. Tout d'abord, la liste positions est initialisée avec une seule valeur (0) pour la première journée, car il n'y a pas de position prise à ce moment-là. La boucle for itère sur les données à partir du deuxième jour jusqu'au dernier jour. Pour chaque jour, la variation de prix entre le jour actuel et le jour précédent est calculée à l'aide de la formule : (prix_jour_actuel - prix_jour_précédent) / prix_jour_précédent. En fonction de la variation de prix calculée, une position est prise : </n>
+- Si la variation de prix est supérieure à 2%, une position d'achat partielle est prise (représentée par 1). </n>
+- Si la variation de prix est inférieure à -2%, une position de vente partielle est prise (représentée par -1). </n>
+- Sinon, aucune position n'est prise (représentée par 0). </n>
+La fonction renvoie uniquement la colonne "Position" du dataframe data dans laquelle on a stocké la liste des positions.  </p>
+
+
 
 <p align="justify">
-Prenons un exemple simple de stratégie. Nous calculons la moyenne mobile sur 50 jours pour un actif et également la moyenne mobile sur 200 jours. Sachant que la moyenne mobile sert à identifier des tendances sur des périodes plus ou moins longues, nous comparons ces deux moyennes mobiles. Une moyenne mobile sur 50 jours (court terme) supérieure à la moyenne mobile sur 200 jours (long terme) peut indiquer une tendance à la hausse récente des prix. La stratégie consistera alors à acheter à ce moment et attendre que les prix continuent à monter sur le court terme (position = 1). L’actif sera revendu lorsque la moyenne mobile sur 200 jours sera supérieure à celle sur 50 jours car cela indique une tendance à la baisse à court terme, soit un risque de baisse de la valeur de l’actif dans les jours qui suivent (position = -1). </p>
+Prenons un autre exemple simple de stratégie. Nous calculons la moyenne mobile sur 50 jours pour un actif et également la moyenne mobile sur 200 jours. Sachant que la moyenne mobile sert à identifier des tendances sur des périodes plus ou moins longues, nous comparons ces deux moyennes mobiles. Une moyenne mobile sur 50 jours (court terme) supérieure à la moyenne mobile sur 200 jours (long terme) peut indiquer une tendance à la hausse récente des prix. La stratégie consistera alors à acheter à ce moment et attendre que les prix continuent à monter sur le court terme (position = 1). L’actif sera revendu lorsque la moyenne mobile sur 200 jours sera supérieure à celle sur 50 jours car cela indique une tendance à la baisse à court terme, soit un risque de baisse de la valeur de l’actif dans les jours qui suivent (position = -1). </p>
 
 
