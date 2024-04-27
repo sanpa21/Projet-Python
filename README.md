@@ -137,6 +137,10 @@ Pour rendre le calcul plus simple, nous ne prenons pas en compte de taux sans ri
 
 ## IV. Visualiser les résultats de la stratégie : méthode **Plot**
 
+<p align="justify">
+A l'aide de la fonction plt.plot() de matplotlib, nous traçons le graphique d'évolution de la performance pour chaque symbole désigné par la stratégie. Nous calculons la valeur de la stratégie en base 100 en ajoutant 1 au rendement de la stratégie pour chaque période ce qui nous permet de représenter la performance de la stratégie sous forme de valeur relative en partant d'une base de 100. Ensuite, plt.plot() nous permet de traçer l'évolution de la valeur de la stratégie au fil du temps. Pour une meilleure visibilité, nous ajoutons au graphique une légende pour indiquer la série de données représentée, un titre qui contient le symbole et des étiquettes d'axes. Enfin, nous affichons le graphique à l'écran.
+
+
 
 ## V. Tester le backtest 
 
