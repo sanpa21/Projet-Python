@@ -154,11 +154,35 @@ A l'aide de la fonction plt.plot() de matplotlib, nous traçons le graphique d'�
 ## V. Tester le backtest 
 <p align="justify">
 Nous testons le code avec un exemple. La fonction mastrategie(data) implémente un exemple de stratégie de trading qui prend des positions basées sur la variation de prix entre les deux derniers jours. Tout d'abord, la liste positions est initialisée avec une seule valeur (0) pour la première journée, car il n'y a pas de position prise à ce moment-là. La boucle for itère sur les données à partir du deuxième jour jusqu'au dernier jour. Pour chaque jour, la variation de prix entre le jour actuel et le jour précédent est calculée à l'aide de la formule : (prix_jour_actuel - prix_jour_précédent) / prix_jour_précédent. En fonction de la variation de prix calculée, une position est prise :  <br> 
-- Si la variation de prix est supérieure à 2%, une position d'achat partielle est prise (représentée par 1).  <br>
-- Si la variation de prix est inférieure à -2%, une position de vente partielle est prise (représentée par -1).  <br>
+- Si la variation de prix est supérieure à 2%, une position d'achat est prise (représentée par 1).  <br>
+- Si la variation de prix est inférieure à -2%, une position de vente est prise (représentée par -1).  <br>
 - Sinon, aucune position n'est prise (représentée par 0).  <br>
 La fonction renvoie uniquement la colonne "Position" du dataframe data dans laquelle on a stocké la liste des positions.  </p>
 
+
+_Résultats_ : 
+                             MSFT       AAPL
+Rendement moyen annuel  -0.152729  -0.093623
+Rendements cumulatifs   -0.144101  -0.095996
+Volatilité quotidienne   0.005663   0.008006
+Volatilité annualisée    0.089891   0.127093
+Ratio de Sharpe         -1.699048  -0.736645
+Bêta                     0.022524  -0.163159
+Bêta haussier           -0.192035  -0.262953
+Bêta baissier            0.255934  -0.403648
+Drawndown maximal       -0.048810  -0.078070
+Kurtosis                15.168969  12.109279
+Skewness                -0.048810  -0.078070
+
+<p align="justify">
+De ces résultats, nous pouvons dire que : <br>
+- Rendement moyen annuel : MSFT affiche un rendement moyen annuel légèrement plus bas que AAPL, ce qui indique une performance inférieure. <br>
+- Rendements cumulatifs : Les rendements cumulatifs de MSFT et AAPL sont tous deux négatifs, ce qui suggère une baisse globale de la valeur au fil du temps. <br>
+- Volatilité quotidienne et annualisée : La volatilité d'AAPL est plus élevée que celle de MSFT, ce qui signifie que les prix des actions d'AAPL ont tendance à fluctuer davantage au jour le jour et sur une base annuelle. <br>
+- Ratio de Sharpe : Le ratio de Sharpe est négatif pour les deux actions, ce qui indique un rendement ajusté au risque défavorable. Cependant, MSFT présente un ratio de Sharpe légèrement plus bas que AAPL, ce qui suggère une performance relative moins favorable en termes de rendement ajusté au risque. <br>
+- Bêta : Les valeurs de bêta pour MSFT et AAPL sont proches de zéro, ce qui signifie que leurs rendements sont moins sensibles aux mouvements du marché global. <br>
+- Drawdown maximal : MSFT affiche un drawdown maximal légèrement inférieur à celui d'AAPL, ce qui indique une résilience relative supérieure lors de périodes de baisse du marché. <br>
+- Kurtosis et Skewness : Les valeurs de kurtosis et de skewness pour les deux actions indiquent une distribution des rendements qui n'est pas parfaitement symétrique ni normale, ce qui suggère des caractéristiques de risque spécifiques à chaque action. </p>
 
 
 <p align="justify">
