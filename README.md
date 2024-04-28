@@ -101,7 +101,7 @@ Nous prenons ici en compte la valeur de clôture dans les calculs des Bêta. En 
 <p align="justify">
 Le Bêta haussier mesure la sensibilité d’un actif aux mouvements positifs du marché, et indique à quel point il est réactif aux hausses du marché, en tant que coefficient de volatilité. 
 Nous calculons le Bêta haussier par rapport à chaque marché, mais à la différence du Bêta calculé précédemment, nous n'utilisons que les rendements positifs du marché dans le calcul de la covariance, en supposant que les rendements positifs du marché représentent des phases haussières du marché. Sinon, le calcul reste similaire à celui du Bêta. Le bêta haussier est calculé par le rapport entre la covariance des rendements de l'actif financier avec les rendements haussiers du marché, représentés par cov_haussier, et la variance des rendements haussiers du marché, représentée par var.
-En affectant au marché un Bêta de 1 : par exemple si un actif a un bêta haussier de 1,2 alors il sera 20% plus réactif que le marché lorsque celui-ci monte, tandis qu’avec un bêta haussier de 0,8, l’actif sera alors 20% moins réactif que le marché, donc moins volatile que ce dernier. </p>
+En affectant au marché un Bêta de 1 : par exemple si un actif a un bêta haussier de 1.2 alors il sera 20% plus réactif que le marché lorsque celui-ci monte, tandis qu’avec un bêta haussier de 0.8, l’actif sera alors 20% moins réactif que le marché, donc moins volatile que ce dernier. </p>
 
 
 #### 2. Bêta baissier
@@ -109,7 +109,7 @@ En affectant au marché un Bêta de 1 : par exemple si un actif a un bêta hauss
 Le Bêta baissier, quant à lui, est également un coefficient de volatilité, mesurant la sensibilité d'un actif financier aux mouvements négatifs du marché et indique à quel point il réagit aux baisses du marché. 
 A la différence du Bêta haussier, nous utilisons cette fois les rendements négatifs du marché dans le calcul de la covariance en supposant que les rendements négatifs représentent des phases baissières, dans le calcul du Bêta baissier. Sinon, le reste du calcul reste similaire à celui du Bêta et du Bêta haussier. 
 Il utilise la covariance des rendements de l'actif financier avec les rendements baissiers du marché, représentée par cov_baissier, et la divise par la variance des rendements baissiers du marché, représentée par var.
-En affectant au marché un Bêta de 1 : par exemple si un actif a un bêta baissier de 1,2 alors il sera 20% plus réactif que le marché lorsque celui-ci baisse, tandis qu’avec un bêta baissier de 0,8, l’actif sera alors 20% moins réactif que le marché quand celui-ci baisse. </p>
+En affectant au marché un Bêta de 1 : par exemple si un actif a un bêta baissier de 1.2 alors il sera 20% plus réactif que le marché lorsque celui-ci baisse, tandis qu’avec un bêta baissier de 0.8, l’actif sera alors 20% moins réactif que le marché quand celui-ci baisse. </p>
 
 
 #### 3. Drawdown Maximal
