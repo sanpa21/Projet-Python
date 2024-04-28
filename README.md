@@ -180,8 +180,8 @@ De ces résultats, nous pouvons dire que : <br>
 - Rendement moyen annuel : La stratégie sur MSFT affiche un rendement moyen annuel légèrement plus bas que pour AAPL, ce qui indique une performance inférieure. <br>
 - Rendements cumulatifs : Les rendements cumulatifs de la stratégie pour MSFT et AAPL sont tous deux négatifs, ce qui suggère une baisse globale de la valeur au fil du temps. <br>
 - Volatilité quotidienne et annualisée : La volatilité du rendements de la stratégie sur AAPL est plus élevée que celle pour MSFT, ce qui signifie que les rendements de la stratégie sur AAPL ont tendance à fluctuer davantage au jour le jour et sur une base annuelle. <br>
-- Ratio de Sharpe : Le ratio de Sharpe est négatif pour les deux actions, ce qui indique un rendement ajusté au risque défavorable. Cependant, MSFT présente un ratio de Sharpe légèrement plus bas que AAPL, ce qui suggère une performance relative moins favorable en termes de rendement ajusté au risque. <br>
-- Bêta : Les valeurs de bêta pour MSFT et AAPL sont proches de zéro, ce qui signifie que leurs rendements sont moins sensibles aux mouvements du marché global. <br>
+- Ratio de Sharpe : Le ratio de Sharpe de la stratégie est négatif pour les deux actions, ce qui indique un rendement ajusté au risque défavorable. Cependant, MSFT présente un ratio de Sharpe légèrement plus bas que AAPL, ce qui suggère une performance relative moins favorable en termes de rendement ajusté au risque. <br>
+- Bêta : Les valeurs de bêta pour MSFT et AAPL sont proches de zéro, ce qui signifie que les rendements de la stratégie sont moins sensibles aux mouvements du marché global. <br>
 - Drawdown maximal : MSFT affiche un drawdown maximal légèrement inférieur à celui d'AAPL, ce qui indique une résilience relative supérieure lors de périodes de baisse du marché. <br>
 - Kurtosis et Skewness : Les valeurs de kurtosis et de skewness pour les deux actions indiquent une distribution des rendements qui n'est pas parfaitement symétrique ni normale, ce qui suggère des caractéristiques de risque spécifiques à chaque action. </p>
 
