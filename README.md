@@ -160,19 +160,20 @@ Nous testons le code avec un exemple. La fonction mastrategie(data) implémente 
 La fonction renvoie uniquement la colonne "Position" du dataframe data dans laquelle on a stocké la liste des positions.  </p>
 
 
-_Résultats_ : 
-                             MSFT       AAPL
-Rendement moyen annuel  -0.152729  -0.093623
-Rendements cumulatifs   -0.144101  -0.095996
-Volatilité quotidienne   0.005663   0.008006
-Volatilité annualisée    0.089891   0.127093
-Ratio de Sharpe         -1.699048  -0.736645
-Bêta                     0.022524  -0.163159
-Bêta haussier           -0.192035  -0.262953
-Bêta baissier            0.255934  -0.403648
-Drawndown maximal       -0.048810  -0.078070
-Kurtosis                15.168969  12.109279
-Skewness                -0.048810  -0.078070
+Résultats : 
+ |                      |MSFT      |AAPL    |
+ | :--------: |  :--------: | :--------: |
+|Rendement moyen annuel | -0.152729 | -0.093623|
+|Rendements cumulatifs  | -0.144101 | -0.095996|
+|Volatilité quotidienne  | 0.005663 | 0.008006|
+|Volatilité annualisée   | 0.089891 | 0.127093|
+|Ratio de Sharpe        | -1.699048 | -0.736645|
+|Bêta                    | 0.022524 | -0.163159|
+|Bêta haussier          | -0.192035 | -0.262953|
+|Bêta baissier           | 0.255934 | -0.403648|
+|Drawndown maximal      | -0.048810 | -0.078070|
+|Kurtosis               | 15.168969 | 12.109279|
+|Skewness               | -0.048810 | -0.078070|
 
 <p align="justify">
 De ces résultats, nous pouvons dire que : <br>
